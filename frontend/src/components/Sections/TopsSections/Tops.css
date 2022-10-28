@@ -1,0 +1,80 @@
+.title a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* ***** Games Section ***** */
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 40s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(320px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box span img:hover{
+  /* opacity: 0.5; */
+  border: purple;
+}
+
+@media (max-width: 620px)   {
+  .box span {
+    width: 95%;
+    height: 95%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  }
+  .box {
+    width: 150px;
+    height: 150px;
+  }
+  .games {min-height: 50vh;}
+  
+}
+@media (max-width: 400px) {
+  .box span {
+    width: 90%;
+    height: 90%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(160px);
+  }
+  .box {
+    width: 130px;
+    height: 130px;
+  }
+  .games {min-height: 40vh;}
+}
+
+/* ***** Fin Games Section ***** */

@@ -1,0 +1,8 @@
+.streamingPage__main {
+  display: flex;
+}
+
+.dashboardPage__main {
+  display: grid;
+  margin-left: 300px;
+}

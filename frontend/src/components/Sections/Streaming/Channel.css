@@ -1,0 +1,37 @@
+.chaine {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.chaine:hover {
+  background-color: #25252c;
+}
+
+.chaine__details {
+  display: flex;
+  align-items: center;
+}
+
+.chaine > div > img {
+  /* object-fit: contain; */
+  margin-right: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chaine > p,
+.chaine__details > p {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+  .chaine__details > p,
+  .chaine > p {
+    display: none;
+  }
+}
